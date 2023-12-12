@@ -1,18 +1,50 @@
 [
     {
       "photo": "chemin/vers/votre/photo.jpg",
-      "tag": "Nature",
+      "tag": "Actualité",
       "title": "Titre de l'article",
       "text": "Contenu de l'article...",
-      "author": "Nom de l'auteur",
+      "author": "C. Le Cam",
       "date": "12 décembre 2023"
     },
     {
       "photo": "chemin/vers/votre/autre_photo.jpg",
-      "tag": "Technologie",
+      "tag": "Infos",
       "title": "Titre d'un autre article",
       "text": "Contenu de l'autre article...",
-      "author": "Un autre auteur",
+      "author": "C. Le Cam",
+      "date": "12 décembre 2023"
+    },
+    {
+      "photo": "chemin/vers/votre/photo.jpg",
+      "tag": "Infos",
+      "title": "Titre de l'article",
+      "text": "Contenu de l'article...",
+      "author": "C. Le Cam",
+      "date": "12 décembre 2023"
+    },
+    {
+      "photo": "chemin/vers/votre/autre_photo.jpg",
+      "tag": "Infos",
+      "title": "Titre d'un autre article",
+      "text": "Contenu de l'autre article...",
+      "author": "A. Briend",
+      "date": "12 décembre 2023"
+    },
+    {
+      "photo": "chemin/vers/votre/photo.jpg",
+      "tag": "Événements",
+      "title": "Titre de l'article",
+      "text": "Contenu de l'article...",
+      "author": "A. Briend",
+      "date": "12 décembre 2023"
+    },
+    {
+      "photo": "chemin/vers/votre/autre_photo.jpg",
+      "tag": "Événements",
+      "title": "Titre d'un autre article",
+      "text": "Contenu de l'autre article...",
+      "author": "C. Le Cam",
       "date": "12 décembre 2023"
     }
   ]
