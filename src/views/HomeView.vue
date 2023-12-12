@@ -2,8 +2,8 @@
   <div class="font-nunito">
     <HeaderNav />
     <div class="px-32 py-12">
-      <div class="grid grid-cols-3 gap-8">
-        <div class="h-100 grid-flow-col col-span-2 row-span-2">
+      <div class="grid grid-cols-3 grid-rows-2 gap-8">
+        <div class="col-span-2 row-span-2">
           <img src="../assets/images/landscape.jpg" alt="paysage" class="w-full object-cover" />
           <div class="pt-5">
             <p class="tag">Actualité</p>
