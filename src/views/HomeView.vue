@@ -4,7 +4,7 @@
     <div class="px-32 py-12">
       <div class="grid grid-cols-3 grid-rows-2 gap-8">
         <div class="col-span-2 row-span-2">
-          <img src="../assets/images/landscape.jpg" alt="paysage" class="w-full object-cover" />
+          <img src="../assets/images/landscape.jpg" alt="paysage" class="w-full h-96 object-cover" />
           <div class="pt-5">
             <p class="tag">Actualité</p>
             <h2 class="font-title text-5xl mt-2">La Roumanie encore et toujours</h2>
@@ -21,6 +21,7 @@
         <div class="">
           <img src="../assets/images/meeting.jpg" alt="paysage" class="h-full object-cover" />
         </div>
+
         <div class="">
           <img src="../assets/images/cab.jpg" alt="paysage" class="h-full object-cover" />
           <div class="pt-5">
