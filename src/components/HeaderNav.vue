@@ -4,7 +4,7 @@
       <p class="text-3xl">Amitiés Taléa</p>
       <div class="flex gap-10 text-lg">
         <p>Accueil</p>
-        <p>Evenements</p>
+        <p>Événements</p>
         <p>Infos</p>
         <p>Actualités</p>
         <p>30 ans</p>
