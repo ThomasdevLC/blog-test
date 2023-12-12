@@ -1,0 +1,19 @@
+[
+    {
+      "photo": "chemin/vers/votre/photo.jpg",
+      "tag": "Nature",
+      "title": "Titre de l'article",
+      "text": "Contenu de l'article...",
+      "author": "Nom de l'auteur",
+      "date": "12 décembre 2023"
+    },
+    {
+      "photo": "chemin/vers/votre/autre_photo.jpg",
+      "tag": "Technologie",
+      "title": "Titre d'un autre article",
+      "text": "Contenu de l'autre article...",
+      "author": "Un autre auteur",
+      "date": "12 décembre 2023"
+    }
+  ]
+  
