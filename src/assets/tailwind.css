@@ -22,3 +22,6 @@
 .tag-second {
   @apply border px-3 inline-block border-white rounded-xl;
 }
+.link {
+  @apply hover:cursor-pointer;
+}
