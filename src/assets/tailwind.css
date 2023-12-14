@@ -19,3 +19,6 @@
 .tag {
   @apply border px-2 inline-block border-gray-900 rounded-xl;
 }
+.tag-second {
+  @apply border px-2 inline-block border-white rounded-xl;
+}

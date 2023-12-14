@@ -14,7 +14,30 @@ module.exports = {
         body: ["Nunito", "sans-serif"],
         title: ["Cormorant Garamond", "serif"],
       },
+      before: {
+        content: '""',
+      },
+      after: {
+        content: '""',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".before": {
+          "&::before": {
+            content: 'var(--before-content, "")',
+          },
+        },
+        ".after": {
+          "&::after": {
+            content: 'var(--after-content, "")',
+          },
+        },
+      };
+
+      addUtilities(newUtilities, ["before", "after"]);
+    },
+  ],
 };
