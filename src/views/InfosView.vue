@@ -3,18 +3,19 @@
     <HeaderNav />
     <div class="px-64 py-14">
       <div class="flex justify-between gap-14">
-        <div class="flex flex-col justify-between w-4/6">
+        <div v-if="MainArticle" class="flex flex-col justify-between w-4/6">
           <div class="">
-            <img src="../assets/images/landscape.jpg" alt="paysage" class="w-full h-auto object-cover" />
+            <img :src="'http://localhost:1337' + MainArticle.image.url" :alt="MainArticle.image.alternativeText" />
           </div>
           <div class="pt-5">
-            <p class="tag">Actualité</p>
-            <h2 class="font-title font-bold text-5xl mt-2">La Roumanie encore et toujours</h2>
-            <p class="mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut laudantium aspernatur voluptatibus. Ad natus laborum placeat eum delectus aliquid
-              expedita debitis, iure illum ea repellat fugiat id facere nam...
+            <p class="tag">{{ MainArticle.tag }}</p>
+            <h2 class="font-title font-bold text-5xl mt-2">{{ MainArticle.title }}</h2>
+            <p class="mt-2 truncate">
+              {{ MainArticle.text }}
             </p>
-            <p class="mt-2"><span class="font-semibold">C. Le Cam </span> | 12 Décembre 2023</p>
+            <p class="mt-2">
+              <span class="font-semibold">{{ MainArticle.author }} </span> | {{ MainArticle.date }}
+            </p>
           </div>
         </div>
         <div class="flex flex-col justify-between">
@@ -90,14 +91,15 @@ import { fetchActualites, fetchInfos, fetchEvenements, fetchMain } from "../../m
 const ActuArticles = ref([]);
 const InfosArticles = ref([]);
 const EventsArticles = ref([]);
-const MainArticle = ref([]);
+const MainArticle = ref(null);
 
 onMounted(async () => {
   try {
     ActuArticles.value = await fetchActualites();
     InfosArticles.value = await fetchInfos();
     EventsArticles.value = await fetchEvenements();
-    MainArticle.value = await fetchMain();
+    const mainArticles = await fetchMain();
+    MainArticle.value = mainArticles[0];
 
     console.log(ActuArticles.value);
     console.log(InfosArticles.value);

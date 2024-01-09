@@ -1,5 +1,3 @@
-// apiModule.js
-
 export async function fetchActualites() {
   const url = "http://localhost:1337/api/articles?filters[tag][$eq]=Actualité&sort[0]=date:desc&populate=image";
   return fetchData(url);
