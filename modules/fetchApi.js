@@ -17,6 +17,11 @@ export async function fetchMain() {
   return fetchData(url);
 }
 
+export async function fetchRemaining() {
+  const url = "http://localhost:1337/api/articles?filters[main][$eq]=false&filters[tag][$ne]=Evénements&sort[0]=date:desc&populate=image";
+  return fetchData(url);
+}
+
 async function fetchData(url) {
   try {
     const response = await fetch(url);
