@@ -84,27 +84,28 @@
 
 <script setup>
 import HeaderNav from "../components/HeaderNav.vue";
-
 import { ref, onMounted } from "vue";
-import { fetchData } from "../../modules/fetchApi";
+import { fetchActualites, fetchInfos, fetchEvenements, fetchMain } from "../../modules/fetchApi";
 
-const articles1 = ref([]);
-const articles2 = ref([]);
+const ActuArticles = ref([]);
+const InfosArticles = ref([]);
+const EventsArticles = ref([]);
+const MainArticle = ref([]);
 
 onMounted(async () => {
   try {
-    const url1 = "http://localhost:1337/api/articles?filters[tag][$eq]=Actualité&sort[0]=date:desc&populate=image";
-    articles1.value = await fetchData(url1);
+    ActuArticles.value = await fetchActualites();
+    InfosArticles.value = await fetchInfos();
+    EventsArticles.value = await fetchEvenements();
+    MainArticle.value = await fetchMain();
 
-    const url2 = "http://localhost:1337/api/articles?filters[tag][$eq]=Evénements&sort[0]=date:desc&populate=image";
-    articles2.value = await fetchData(url2);
-
-    console.log(articles1.value);
-    console.log(articles2.value);
+    console.log(ActuArticles.value);
+    console.log(InfosArticles.value);
+    console.log(EventsArticles.value);
+    console.log(MainArticle.value);
   } catch (error) {
+    console.error("Erreur lors de la récupération des données:", error.message);
     // Gérez l'erreur ici si nécessaire
   }
 });
 </script>
-
-<style></style>
