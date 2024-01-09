@@ -18,14 +18,16 @@
             </p>
           </div>
         </div>
-        <div v-for="article in eventsArticles.slice(0, 2)" :key="article.id" class="flex flex-col justify-between">
+        <div v-for="eventArticle in eventsArticles.slice(0, 2)" :key="eventArticle.id" class="flex flex-col justify-between">
           <div class="relative text-white h-80">
-            <img :src="'http://localhost:1337' + article.image.url" :alt="article.image.alternativeText" class="h-full object-cover" />
+            <img :src="'http://localhost:1337' + eventArticle.image.url" :alt="eventArticle.image.alternativeText" class="h-full object-cover" />
             <div class="absolute top-0 h-full bg-black bg-opacity-50 w-full flex flex-col justify-end">
               <div class="p-3">
-                <p class="tag-second">Actualité</p>
-                <h2 class="font-title font-bold text-2xl mt-2">Compte rendu de l’assemblée générale du 28 novembre</h2>
-                <p class="mt-2"><span class="font-semibold">C. Le Cam </span> | 12 Décembre 2023</p>
+                <p class="tag-second">{{ eventArticle.tag }}</p>
+                <h2 class="font-title font-bold text-2xl mt-2">{{ eventArticle.title }}</h2>
+                <p class="mt-2">
+                  <span class="font-semibold">{{ eventArticle.author }} </span> | {{ eventArticle.date }}
+                </p>
               </div>
             </div>
           </div>
